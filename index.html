@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Hammer">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form id="setbooks" action="/setbooks" method="PUT">
+        <fieldset>
+          <legend>Books</legend>
+          <label for="userInputTitle">Enter book title: </label>
+          <input type="text" id="userInputTitle" name="userInputTitle">
+          <label for="userInputAuthor">Enter book author: </label>
+          <input type="text" id="userInputAuthor" name="userInputAuthor">
+        </fieldset>
+      </form>
+      <div class="submitBar">
+        <div></div>
+        <button class="submitInput">Submit book(s)</button>
+        <div></div>
+      </div>
+      <section class="bookDisplay">
+      </section>
+    </main>
+  </body>
+</html>
