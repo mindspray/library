@@ -12,10 +12,22 @@
       <form id="setbooks" action="/setbooks" method="PUT">
         <fieldset>
           <legend>Books</legend>
-          <label for="userInputTitle">Enter book title: </label>
-          <input type="text" id="userInputTitle" name="userInputTitle">
-          <label for="userInputAuthor">Enter book author: </label>
-          <input type="text" id="userInputAuthor" name="userInputAuthor">
+
+          <ul>
+            <li>
+              <label for="userInputTitle">Enter book title: </label>
+              <input type="text" id="userInputTitle" name="userInputTitle">
+            </li>
+            <li>
+              <label for="userInputAuthor">Enter book author: </label>
+              <input type="text" id="userInputAuthor" name="userInputAuthor">
+            </li>
+            <li>
+              <label for="isRead">Has been read?</label>
+              <input type="checkbox" id="isRead" name="isRead">
+            </li>
+          </ul>
+
         </fieldset>
       </form>
       <div class="submitBar">

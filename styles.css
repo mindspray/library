@@ -5,11 +5,23 @@ body {
 main {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 80px auto 1fr;
+  grid-template-rows: auto auto 1fr;
 }
 main form {
   background-color: lightblue;
 }
+ul{
+  width: 25%;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+li * {
+  margin-right: auto;
+}
+
 main .submitBar {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -29,5 +41,39 @@ main .bookDisplay {
   /* border: 3px ridge red; */
   border-style: ridge;
   background-color: #ddd;
-  padding: 0px 20px;
+  padding-left: 20px;
+}
+.close{
+  cursor: pointer;
+  position: relative;
+  top:calc(-100% + 50px);
+  right: -1px;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: lightpink;
+  color: white;
+}
+.close::after {
+  position: absolute;
+  left: 27%;
+  top: 10%;
+  content: 'X';
+  font-size: 32px;
+  text-align: center;
+  vertical-align: middle;
+}
+.read {
+  cursor: pointer;
+  position: relative;
+  top: calc(-100% + 50px);
+  right: -1px;
+  float: right;
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+.submitInput {
+  padding: 20px 40px;
 }
