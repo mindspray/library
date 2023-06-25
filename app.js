@@ -14,17 +14,19 @@ submitInput.addEventListener("click", () => {
   userInputRead.checked = false;
 });
 
-function Book({title: title, author: author, isRead: isRead}){
-  this.title = title;
-  this.author = author;
-  this.isRead = isRead;
+class Book {
+  constructor(title, author, isRead){
+    this.title = title;
+    this.author = author;
+    this.isRead = isRead;
+  }
 }
 
 function addToLibrary(){
   let title = userInputTitle.value;
   let author = userInputAuthor.value;
   let isRead = userInputRead.checked;
-  myLibrary.push(new Book({title: title, author: author, isRead: isRead}));
+  myLibrary.push(new Book(title, author, isRead));
   displayBookCard(myLibrary[myLibrary.length-1]);
 }
 
@@ -38,7 +40,7 @@ function displayBookCard(userObj){
   card.classList.add("card");
   readDiv.classList.add("read");
   if(userObj.isRead === true){
-    readDiv.textContent = " read";
+    readDiv.textContent = "read";
     userObj.isRead = true;
   } else if (userObj.isRead === false){
     readDiv.textContent = " not read";
@@ -50,7 +52,7 @@ function displayBookCard(userObj){
       readDiv.textContent = "Not read";
     } else if (userObj.isRead === false){
       userObj.isRead = true;
-      readDiv.textContent = "is read";
+      readDiv.textContent = "read";
     }
   })
   closeDiv.classList.add("close");
